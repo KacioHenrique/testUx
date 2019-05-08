@@ -16,6 +16,8 @@ class ViewControllerFromTest1: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         text1.isEditable = false
         text2.isEditable = false
+        print(creatText())
+       
     }
   //[pag1,pag2]
     @IBAction func red(_ sender: Any) {
@@ -23,6 +25,7 @@ class ViewControllerFromTest1: UIViewController {
         text1.textColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
         text2.backgroundColor = #colorLiteral(red: 1, green: 0.4155011725, blue: 0.4733316118, alpha: 1)
         text2.textColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
+        print(creatText())
     }
 
     @IBAction func blue(_ sender: Any) {
@@ -38,9 +41,23 @@ class ViewControllerFromTest1: UIViewController {
             text1.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             text2.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             text2.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            text1.text = "Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta. Quem manda na minha terra sou euzis! Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Per aumento de cachacis, eu reclamis."
-            text2.text = "Quem num gosta di mé, boa gentis num é. Per aumento de cachacis, eu reclamis. Quem manda na minha terra sou euzis! Aenean aliquam molestie leo, vitae iaculis nisl.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Delegadis gente finis, bibendum egestas augue arcu ut est. Diuretics paradis num copo é motivis de denguis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis."
+            buldText()
         }
+    }
+    func buldText(){
+        self.text1.text = creatText()
+        self.text2.text = creatText()
     }
 }
 
+
+func creatText()->String{
+    let sizeText:Int = Int.random(in: 100 ..< 300)
+    var string:String = ""
+    for _ in 0...sizeText{
+        if let unicode = UnicodeScalar(Int.random(in: 0 ..< sizeText)){
+           string.append( Character(unicode))
+        }
+    }
+    return string
+}

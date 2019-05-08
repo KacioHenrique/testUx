@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwX-91-fSF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,6 +106,15 @@ O chio acumulado dos grãos caindo faz a sala retumbar como o oceano.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH1-lI-fwd">
+                                <rect key="frame" x="124" y="179" width="38" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.41550117250000002" blue="0.4733316118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="red:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5DI-T8-6kY"/>
+                                    <action selector="red:" destination="nwX-91-fSF" eventType="touchUpInside" id="EwS-o8-SUK"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOp-HH-GUh">
                                 <rect key="frame" x="16" y="305" width="343" height="342"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -119,22 +128,13 @@ Este é o Morte cuja esfera particular de ações é, bem, nem um pouco esféric
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH1-lI-fwd">
-                                <rect key="frame" x="124" y="179" width="38" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.41550117250000002" blue="0.4733316118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="red:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5DI-T8-6kY"/>
-                                    <action selector="red:" destination="nwX-91-fSF" eventType="touchUpInside" id="EwS-o8-SUK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6S-4T-Kuf">
-                                <rect key="frame" x="231" y="380" width="38" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8G-BW-znA">
+                                <rect key="frame" x="292" y="374" width="39" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.28037763970000001" green="0.44201055680000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="blue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTc-fV-dSK"/>
-                                    <action selector="blue:" destination="nwX-91-fSF" eventType="touchUpInside" id="atS-yT-WlG"/>
+                                    <action selector="blue:" destination="nwX-91-fSF" eventType="touchUpInside" id="9Ly-Jz-IOm"/>
+                                    <action selector="blue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="he2-gW-mZP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +146,7 @@ Este é o Morte cuja esfera particular de ações é, bem, nem um pouco esféric
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="blue" destination="z6S-4T-Kuf" id="8vh-tM-ZEc"/>
+                        <outlet property="blue" destination="l8G-BW-znA" id="7qx-mB-iyO"/>
                         <outlet property="red" destination="WH1-lI-fwd" id="UYw-v9-gbc"/>
                         <outlet property="text1" destination="9gP-7p-wFO" id="CRK-xD-71t"/>
                         <outlet property="text2" destination="OOp-HH-GUh" id="huB-ff-urL"/>

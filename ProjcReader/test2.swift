@@ -55,11 +55,13 @@ class ViewControllerFromTest2: UIViewController {
         if red.isSelected {
             blue.isSelected = true
             red.isSelected = false
-        }else{
+        }
+        else{
             blue.isSelected = false
             red.isSelected = true
         }
-        
+        self.text2.text = creatText()
+        self.text1.text = creatText()
     }
 }
 
